@@ -116,10 +116,10 @@
 #### Config Page 1
 
 - **Data Source:** SharePoint Search
-- **Query Template:** Leave blank with a single space " " and apply.
+- **Query Template:** Leave blank with a single space ` ` and apply.
 - **Result Source Id:** LocalSharePointResults
 - **Selected Properties:**
-  - Add all managed properties created for the `JobOpportunity` list (`CM-{ColumnName}`).
+  - Add all managed properties created for the `JobOpportunity` list `CM-{ColumnName}`
   - Add: `Path`, `Title`, `UniqueID`.
 - **Enable localization:** ON
 - **Show paging:** ON
@@ -136,17 +136,28 @@
 #### Config Page 3
 
 - **Use input query text:** ON
-- **Dynamic Value:** Connected to **PnP - Search Box**.
+- Dynamc value
+- Connected to **PnP - Search Box**.
+- **Use as default value** ON
+- **Default value** Blank ` `
 - **Configure Query Modifiers:**
   - Enable **Advanced Search**.
 - **Connect to Filters Web Part:** Target the **PnP - Search Filters** web part.
 
 #### Advanced Search Settings
 
-- **List Path:** `https://{tenant}.sharepoint.com/sites/{SiteName}/Lists/{JobOpportunityListName}/`
-- **Search Box Selector:** `[data-sp-feature-tag="pnpSearchBoxWebPart"] input`
-- **Search Button ID:** `advancedSearch-Search`
-- **Clear Button ID:** `advancedSearch-Clear`
+- **JobOpportunity List Path:** `https://{tenant}.sharepoint.com/sites/{SiteName}/Lists/{JobOpportunityListName}/`
+- **PnP Search Box Selector:** `[data-sp-feature-tag="pnpSearchBoxWebPart"] input`
+- **Advanced Search - Search Button ID:** `advancedSearch-Search`
+- **Advanced Search - Clear Button ID:** `advancedSearch-Clear`
+- **English JobTitle Managed Property:** `CM-JobTitleEn`
+- **French JobTitle Managed Property:** `CM-JobTitleFr`
+- **Department Managed Property:** `CM-Department`
+- **ClassificationCode Managed Property:** `CM-ClassificationCode`
+- **ClassificationLevel Managed Property:** `CM-ClassificationLevel`
+- **LanguageRequirement Managed Property:** `CM-LanguageRequirement`
+- **Location Managed Property:** `CM-Location`
+- **Duration Managed Property:** `CM-Duration`
 
 ### Final Steps
 
