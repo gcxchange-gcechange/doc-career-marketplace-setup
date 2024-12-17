@@ -37,7 +37,7 @@
 | **JobType**             | Managed Metadata       | (Job Type - allow multiple selections)                          |
 | **ProgramArea**         | Managed Metadata       | (Program Area)                                                  |
 | **ClassificationCode**  | Managed Metadata       | (Classification Code term set)                                  |
-| **ClassificationLevel** | Number                 | Min: 1, Max: 5                                                  |
+| **ClassificationLevel** | Lookup List Column     | (ClassificationLevel lookup list)                               |
 | **NumberOfOpportunities** | Number               | Default: 1, Min: 1                                              |
 | **Duration**            | Managed Metadata       | (Duration term set)                                             |
 | **ApplicationDeadlineDate** | Date and Time     | Default to 3 months from creation date.<br>Formula: `=DATE(YEAR(Created), MONTH(Created) + 3, DAY(Created))` |
@@ -45,12 +45,11 @@
 | **JobDescriptionFr**    | Multiple lines of text |                                                                 |
 | **WorkSchedule**        | Managed Metadata       | (Work Schedule term set)                                        |
 | **Location**            | Managed Metadata       | (Location term set)                                             |
-| **SecurityClearance**   | Managed Metadata       | (Security Clearance term set)                                    |
+| **SecurityClearance**   | Managed Metadata       | (Security Clearance term set)                                   |
 | **LanguageRequirement** | Managed Metadata       | (Language Requirement term set)                                 |
 | **WorkArrangement**     | Managed Metadata       | (Work Arrangement term set)                                     |
 | **ApprovedStaffing**    | Yes/No                 | Default: No                                                     |
-| **AssetSkills**         | Single line of text    | TODO: Consider handling translations                            |
-| **EssentialSkills**     | Single line of text    | TODO: Consider handling translations                            |
+| **Skills**              | Lookup List Column     | (Skills lookup list)                                            |
 
 3. **Reindex the site** after adding columns:
    - Go to **Site Settings** -> **Search and offline availability** -> **Reindex site**.
