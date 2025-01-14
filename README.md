@@ -6,20 +6,10 @@
 
 1. **Create the term group "Career Marketplace"** at the tenant level.
 2. **Add a term set** for the following:
-   - **Classification Code**
-   - **Department**
-   - **Duration**
    - **Job Type**
-   - **Language Requirement**
-   - **Location**
-     - Hierarchy for this term set: `Province -> Region -> City`
-     - Example: `Location -> Ontario -> Eastern Ontario -> Ottawa`
    - **Program Area**
-   - **Security Clearance**
-   - **Work Arrangement**
-   - **Work Schedule**
 3. **Add terms** to each of the term sets created.
-4. **Add translations** for each term set and all child terms.
+4. **Add translations** for each term set and any child terms.
 
 ### Job Opportunity List
 
@@ -30,24 +20,24 @@
 |--------------------------|------------------------|-----------------------------------------------------------------|
 | **ContactObjectId**     | Single line of text    |                                                                 |
 | **ContactName**         | Single line of text    |                                                                 |
-| **Department**          | Managed Metadata       | (Department term set)                                           |
+| **Department**          | Lookup List Column       | (Department lookup list)                                           |
 | **ContactEmail**        | Single line of text    |                                                                 |
 | **JobTitleEn**          | Single line of text    |                                                                 |
 | **JobTitleFr**          | Single line of text    |                                                                 |
 | **JobType**             | Managed Metadata       | (Job Type - allow multiple selections)                          |
 | **ProgramArea**         | Managed Metadata       | (Program Area)                                                  |
-| **ClassificationCode**  | Managed Metadata       | (Classification Code term set)                                  |
+| **ClassificationCode**  | Lookup List Column       | (Classification Code term set)                                  |
 | **ClassificationLevel** | Lookup List Column     | (ClassificationLevel lookup list)                               |
 | **NumberOfOpportunities** | Number               | Default: 1, Min: 1                                              |
-| **Duration**            | Managed Metadata       | (Duration term set)                                             |
+| **Duration**            | Lookup List Column       | (Duration term set)                                             |
 | **ApplicationDeadlineDate** | Date and Time     | Default to 3 months from creation date.<br>Formula: `=DATE(YEAR(Created), MONTH(Created) + 3, DAY(Created))` |
 | **JobDescriptionEn**    | Multiple lines of text |                                                                 |
 | **JobDescriptionFr**    | Multiple lines of text |                                                                 |
-| **WorkSchedule**        | Managed Metadata       | (Work Schedule term set)                                        |
-| **Location**            | Managed Metadata       | (Location term set)                                             |
-| **SecurityClearance**   | Managed Metadata       | (Security Clearance term set)                                   |
-| **LanguageRequirement** | Managed Metadata       | (Language Requirement term set)                                 |
-| **WorkArrangement**     | Managed Metadata       | (Work Arrangement term set)                                     |
+| **WorkSchedule**        | Lookup List Column       | (Work Schedule term set)                                        |                                       |
+| **SecurityClearance**   | Lookup List Column       | (Security Clearance term set)                                   |
+| **LanguageComprehension** | Single line of text      |                                 |
+| **LanguageRequirement** | Lookup List Column       | (Language Requirement term set)                                 |
+| **WorkArrangement**     | Lookup List Column       | (Work Arrangement term set)                                     |
 | **ApprovedStaffing**    | Yes/No                 | Default: No                                                     |
 | **Skills**              | Lookup List Column     | (Skills lookup list)                                            |
 
