@@ -16,30 +16,34 @@
 1. **Create an SPFx list** in the Career Marketplace site called `JobOpportunity`.
 2. **Add columns** for the following properties:
 
-| Column Name             | Type                   | Details                                                         |
-|--------------------------|------------------------|-----------------------------------------------------------------|
-| **ContactObjectId**     | Single line of text    |                                                                 |
-| **ContactName**         | Single line of text    |                                                                 |
-| **Department**          | Lookup List Column       | (Department lookup list)                                           |
-| **ContactEmail**        | Single line of text    |                                                                 |
-| **JobTitleEn**          | Single line of text    |                                                                 |
-| **JobTitleFr**          | Single line of text    |                                                                 |
-| **JobType**             | Managed Metadata       | (Job Type - allow multiple selections)                          |
-| **ProgramArea**         | Managed Metadata       | (Program Area)                                                  |
-| **ClassificationCode**  | Lookup List Column       | (Classification Code term set)                                  |
-| **ClassificationLevel** | Lookup List Column     | (ClassificationLevel lookup list)                               |
-| **NumberOfOpportunities** | Number               | Default: 1, Min: 1                                              |
-| **Duration**            | Lookup List Column       | (Duration term set)                                             |
-| **ApplicationDeadlineDate** | Date and Time     | Default to 3 months from creation date.<br>Formula: `=DATE(YEAR(Created), MONTH(Created) + 3, DAY(Created))` |
-| **JobDescriptionEn**    | Multiple lines of text |                                                                 |
-| **JobDescriptionFr**    | Multiple lines of text |                                                                 |
-| **WorkSchedule**        | Lookup List Column       | (Work Schedule term set)                                        |                                       |
-| **SecurityClearance**   | Lookup List Column       | (Security Clearance term set)                                   |
-| **LanguageComprehension** | Single line of text      |                                 |
-| **LanguageRequirement** | Lookup List Column       | (Language Requirement term set)                                 |
-| **WorkArrangement**     | Lookup List Column       | (Work Arrangement term set)                                     |
-| **ApprovedStaffing**    | Yes/No                 | Default: No                                                     |
-| **Skills**              | Lookup List Column     | (Skills lookup list)                                            |
+| Column Name             | Type                   | Source List         | Selected Column   | Additional Columns         | Additional Details            |
+|-------------------------|------------------------|---------------------|-------------------|----------------------------|-------------------------------|
+| **ContactObjectId**     | Single line of text    |                     |                   |                            |                               |
+| **ContactName**         | Single line of text    |                     |                   |                            |                               |
+| **Department**          | Lookup List Column     | Department          | NameEn            | NameFr, ID                 |                               |
+| **ContactEmail**        | Single line of text    |                     |                   |                            |                               |
+| **JobTitleEn**          | Single line of text    |                     |                   |                            |                               |
+| **JobTitleFr**          | Single line of text    |                     |                   |                            |                               |
+| **JobType**             | Managed Metadata       | Job Type            |                   |                            | Allow multiple selections     |
+| **ProgramArea**         | Managed Metadata       | Program Area        |                   |                            |                               |
+| **ClassificationCode**  | Lookup List Column     | ClassificationCode  | NameEn            | NameFr, ID                 |                               |
+| **ClassificationLevel** | Lookup List Column     | ClassificationLevel | NameEn            | NameFr, ID                 |                               |
+| **NumberOfOpportunities** | Number               |                     |                   |                            |                               |
+| **Duration**            | Lookup List Column     | Duration            | NameEn            | NameFr, ID                 |                               |
+| **ApplicationDeadlineDate** | Date and Time     |                     |                   |                            |                               |
+| **JobDescriptionEn**    | Multiple lines of text |                     |                   |                            |                               |
+| **JobDescriptionFr**    | Multiple lines of text |                     |                   |                            |                               |
+| **WorkSchedule**        | Lookup List Column     | WorkSchedule        | NameEn            | NameFr                     |                               |
+| **SecurityClearance**   | Lookup List Column     | SecurityClearance   | NameEn            | NameFr                     |                               |
+| **LanguageComprehension** | Single line of text  |                     |                   |                            |                               |
+| **LanguageRequirement** | Lookup List Column     | LanguageRequirement | NameEn            | NameFr, ID                 |                               |
+| **WorkArrangement**     | Lookup List Column     | WorkArrangement     | NameEn            | NameFr                     |                               |
+| **ApprovedStaffing**    | Yes/No                 |                     |                   |                            |                               |
+| **Skills**              | Lookup List Column     | Skills              | NameEn            | NameFr                     |                               |
+| **City**                | Lookup List Column     | City                | NameEn            | NameFr, ID                 |                               |
+| **LanguageComprehension** | Single line of text  |                     |                   |                            |                               |
+| **DurationQuantity**    | Number               |                     |                   |                            |                               |
+| **DurationInDays**      | Number               |                     |                   |                            |                               |
 
 3. **Reindex the site** after adding columns:
    - Go to **Site Settings** -> **Search and offline availability** -> **Reindex site**.
@@ -49,7 +53,8 @@
 
 1. **Create managed properties** for the columns in the `JobOpportunity` list:
    - Go to **SharePoint Admin Center** -> **More Features** -> **Search** -> **Manage Search Schema**.
-   - Create a new managed property for each column with the naming convention: `CM-{ColumnName}`.
+   - Create a new managed property for each column/additional column(s) with the naming convention: `CM-{ColumnName}En`, `CM-{ColumnName}Fr`, or `CM-{ColumnName}Id`.
+   - For **DurationInDays** map to one of the  existing `RefinableInt{num}` maneged properties.
    - **Crawled Property Formats:**
      - Managed metadata: `OWS_TAXID_{ColumnName}`
      - Other fields: `OWS_{ColumnName}`
@@ -63,7 +68,7 @@
 
 3. **Create managed properties for PnP Search Filters:**
    - For **date filters:** Use `RefinableDateFirst{num}`.
-   - For **managed metadata filters:** Use `RefinableString{num}`.
+   - For **managed metadata filters:** Use`RefinableString{num}`.
 
 4. **Reindex the site** after adding managed properties.
 
@@ -108,8 +113,23 @@
 - **Query Template:** Leave blank with a single space ` ` and apply.
 - **Result Source Id:** LocalSharePointResults
 - **Selected Properties:**
-  - Add all managed properties created for the `JobOpportunity` list `CM-{ColumnName}`
-  - Add: `Path`, `Title`, `UniqueID`.
+  - **Add the following managed properties**
+  - CM-ApplicationDeadlineDate
+  - CM-City
+  - CM-CityFr
+  - CM-ClassificationLevel
+  - CM-ContactEmail
+  - CM-ContactName
+  - CM-ContactObjectId
+  - CM-Duration
+  - CM-DurationFr
+  - CM-DurationQuantity
+  - CM-JobDescriptionEn
+  - CM-JobDescriptionFr
+  - CM-JobTitleEn
+  - CM-JobTitleFr
+  - CM-JobType
+  - Path
 - **Enable localization:** ON
 - **Show paging:** ON
 - **Items per page:** 9
@@ -141,12 +161,13 @@
 - **Advanced Search - Clear Button ID:** `advancedSearch-Clear`
 - **English JobTitle Managed Property:** `CM-JobTitleEn`
 - **French JobTitle Managed Property:** `CM-JobTitleFr`
-- **Department Managed Property:** `CM-Department`
-- **ClassificationCode Managed Property:** `CM-ClassificationCode`
-- **ClassificationLevel Managed Property:** `CM-ClassificationLevel`
-- **LanguageRequirement Managed Property:** `CM-LanguageRequirement`
-- **Location Managed Property:** `CM-Location`
-- **Duration Managed Property:** `CM-Duration`
+- **Department Managed Property:** `CM-DepartmentId`
+- **ClassificationCode Managed Property:** `CM-ClassificationCodeId`
+- **ClassificationLevel Managed Property:** `CM-ClassificationLevelId`
+- **LanguageRequirement Managed Property:** `CM-LanguageRequirementId`
+- **City Managed Property:** `CM-CityId`
+- **Duration Managed Property:** `CM-DurationId`
+- **Duartion Quantity Managed Property:** The `RefineableInt{num}` you setup earlier.
 
 ### Final Steps
 
