@@ -39,7 +39,7 @@
 | **LanguageRequirement** | Lookup List Column     | LanguageRequirement | NameEn            | NameFr, ID                 |                               |
 | **WorkArrangement**     | Lookup List Column     | WorkArrangement     | NameEn            | NameFr                     |                               |
 | **ApprovedStaffing**    | Yes/No                 |                     |                   |                            |                               |
-| **Skills**              | Lookup List Column     | Skills              | NameEn            | NameFr                     |                               |
+| **Skills**              | Lookup List Column     | Skills              | NameEn            | NameFr                     | Allow multiple selections     |
 | **City**                | Lookup List Column     | City                | NameEn            | NameFr, ID                 |                               |
 | **DurationQuantity**    | Number               |                     |                   |                            |                               |
 | **DurationInDays**      | Number               |                     |                   |                            |                               |
