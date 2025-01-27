@@ -41,7 +41,6 @@
 | **ApprovedStaffing**    | Yes/No                 |                     |                   |                            |                               |
 | **Skills**              | Lookup List Column     | Skills              | NameEn            | NameFr                     |                               |
 | **City**                | Lookup List Column     | City                | NameEn            | NameFr, ID                 |                               |
-| **LanguageComprehension** | Single line of text  |                     |                   |                            |                               |
 | **DurationQuantity**    | Number               |                     |                   |                            |                               |
 | **DurationInDays**      | Number               |                     |                   |                            |                               |
 
