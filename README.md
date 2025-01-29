@@ -144,7 +144,7 @@
 #### Config Page 3
 
 - **Use input query text:** ON
-- Dynamc value
+- Dynamic value
 - Connected to **PnP - Search Box**.
 - **Use as default value** ON
 - **Default value** Blank ` `
@@ -152,7 +152,7 @@
   - Enable **Advanced Search**.
 - **Connect to Filters Web Part:** Target the **PnP - Search Filters** web part.
 
-#### Advanced Search Settings
+#### Advanced Search Settings (page 3 cont.)
 
 - **JobOpportunity List Path:** `https://{tenant}.sharepoint.com/sites/{SiteName}/Lists/{JobOpportunityListName}/`
 - **PnP Search Box Selector:** `[data-sp-feature-tag="pnpSearchBoxWebPart"] input`
@@ -167,6 +167,7 @@
 - **City Managed Property:** `CM-CityId`
 - **Duration Managed Property:** `CM-DurationId`
 - **Duartion Quantity Managed Property:** The `RefineableInt{num}` you setup earlier.
+- **ApplicationDeadline Filter Managed Property:** The `RefinableDateFirst{num}` you setup earlier.
 
 ### Final Steps
 
