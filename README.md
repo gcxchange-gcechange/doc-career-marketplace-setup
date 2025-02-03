@@ -53,7 +53,7 @@
 1. **Create managed properties** for the columns in the `JobOpportunity` list:
    - Go to **SharePoint Admin Center** -> **More Features** -> **Search** -> **Manage Search Schema**.
    - Create a new managed property for each column/additional column(s) with the naming convention: `CM-{ColumnName}En`, `CM-{ColumnName}Fr`, or `CM-{ColumnName}Id`.
-   - For **DurationInDays** map to one of the  existing `RefinableInt{num}` maneged properties.
+   - For **DurationInDays** map to one of the  existing `RefinableInt{num}` managed properties.
    - **Crawled Property Formats:**
      - Managed metadata: `OWS_TAXID_{ColumnName}`
      - Other fields: `OWS_{ColumnName}`
@@ -63,7 +63,7 @@
    - **Searchable:** True
    - **Queryable:** True
    - **Retrievable:** True
-   - **Multiple Values:** False (True for `JobType`)
+   - **Multiple Values:** False (True for `JobType` and `Skills`)
 
 3. **Create managed properties for PnP Search Filters:**
    - For **date filters:** Use `RefinableDateFirst{num}`.
