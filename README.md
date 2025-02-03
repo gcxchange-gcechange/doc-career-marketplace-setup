@@ -139,7 +139,23 @@
 - **Layout:** "Job Opportunity" custom type with briefcase icon.
 - **Show results count:** ON
 - **Show selected filters:** ON
-- **Language:** `en` or `fr`
+- **Selected language:** `en` or `fr`
+- **Job opportunity page URL:** The URL to the job opportunity page up intil where ID would be `https://devgcx.sharepoint.com/sites/CM-test/SitePages/Job-Opportunity.aspx?JobOpportunityId=`
+- **ApplicationDeadlineDate Managed Property:** `CM-ApplicationDeadlineDate`
+- **CityEn Managed Property:** `CM-City`
+- **CityFr Managed Property:** `CM-CityFr`
+- **ClassificationLevel Managed Property:** `CM-ClassificationLevel`
+- **ContactEmail Managed Property:** `CM-ContactEmail`
+- **ContactName Managed Property:** `CM-ContactName`
+- **ContactObjectId Managed Property:** `CM-ContactObjectId`
+- **DurationEn Managed Property:** `CM-Duration`
+- **DurationFr Managed Property:** `CM-DurationFr`
+- **JobDescriptionEn Managed Property:** `CM-JobDescriptionEn`
+- **JobDescriptionFr Managed Property:** `CM-JobDescriptionFr`
+- **JobTitleEn Managed Property:** `CM-JobTitleEn`
+- **JobTitleFr Managed Property:** `CM-JobTitleFr`
+- **JobType Managed Property:** `CM-JobType`
+- **DurationQuantity Managed Property:** `CM-DurationQuantity`
 
 #### Config Page 3
 
