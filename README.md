@@ -129,6 +129,7 @@
   - CM-JobTitleFr
   - CM-JobType
   - Path
+- **Language of search request:** English (1033)
 - **Enable localization:** ON
 - **Show paging:** ON
 - **Items per page:** 9
@@ -156,6 +157,7 @@
 - **JobTitleFr Managed Property:** `CM-JobTitleFr`
 - **JobType Managed Property:** `CM-JobType`
 - **DurationQuantity Managed Property:** `CM-DurationQuantity`
+- **JobType term set GUID:** The term set GUID for JobType
 
 #### Config Page 3
 
