@@ -148,6 +148,8 @@
 - **CityEn Managed Property:** `CM-City`
 - **CityFr Managed Property:** `CM-CityFr`
 - **ClassificationLevel Managed Property:** `CM-ClassificationLevel`
+- **ClassificationCodeEn Managed Property:** `CM-ClassificationCode`
+- **ClassificationCodeFr Managed Property:** `CM-ClassificationCodeFr`
 - **ContactEmail Managed Property:** `CM-ContactEmail`
 - **ContactName Managed Property:** `CM-ContactName`
 - **ContactObjectId Managed Property:** `CM-ContactObjectId`
