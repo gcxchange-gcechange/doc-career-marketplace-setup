@@ -117,6 +117,8 @@
   - CM-City
   - CM-CityFr
   - CM-ClassificationLevel
+  - CM-ClassificationCode
+  - CM-ClassificationCodeFr
   - CM-ContactEmail
   - CM-ContactName
   - CM-ContactObjectId
