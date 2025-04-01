@@ -100,7 +100,7 @@
    - **Template:**
      - Use **Check box** for most filters.
      - Use **Date range** for date filters.
-   - For filters allowing multiple values (e.g., **Work Schedule** and **Job Type**), enable multi-value options with the **OR** operator.
+   - For filters allowing multiple values (e.g., **Job Type** and **Program Areas**), enable multi-value options with the **OR** operator.
 4. Set the **operator** between filters to **AND**.
 5. Layout: **Horizontal**.
 
