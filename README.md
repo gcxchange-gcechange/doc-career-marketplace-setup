@@ -78,6 +78,7 @@
 - [PnP Modern Search (v4.14.0)](https://microsoft-search.github.io/pnp-modern-search/)
 - [spfx-pnp-modern-search-career-marketplace](https://github.com/gcxchange-gcechange/spfx-pnp-modern-search-career-marketplace)
 - [spfx-advanced-search](https://github.com/gcxchange-gcechange/spfx-advanced-search)
+- [spfx-cm-filters](https://github.com/gcxchange-gcechange/spfx-cm-filters)
 - [spfx-careerMarketplace](https://github.com/gcxchange-gcechange/spfx-careerMarketplace)
 
 ## Webpart Setup
@@ -91,18 +92,12 @@
 1. Add the web part to the page.
 2. Set the language to English or French in the control panel.
 
-### PnP - Search Filters
+### Filters Web Part
 
 1. Add the web part to the page.
-2. Set the data connection to the **PnP - Search Results** web part.
-3. **Customize Filters:**
-   - Add filters and set the **Filter field** to the managed properties (e.g., `RefinableString{num}`).
-   - **Template:**
-     - Use **Check box** for most filters.
-     - Use **Date range** for date filters.
-   - For filters allowing multiple values (e.g., **Job Type** and **Program Areas**), enable multi-value options with the **OR** operator.
-4. Set the **operator** between filters to **AND**.
-5. Layout: **Horizontal**.
+2. Set the language to `en` or `fr`
+3. Enter the JobType term GUID
+4. Enter the ProgramArea term GUID 
 
 ### PnP - Search Results
 
@@ -141,7 +136,6 @@
 
 - **Layout:** "Job Opportunity" custom type with briefcase icon.
 - **Show results count:** ON
-- **Show selected filters:** ON
 - **Selected language:** `en` or `fr`
 - **Job opportunity page URL:** The URL to the job opportunity page up intil where ID would be `https://devgcx.sharepoint.com/sites/CM-test/SitePages/Job-Opportunity.aspx?JobOpportunityId=`
 - **ApplicationDeadlineDate Managed Property:** `CM-ApplicationDeadlineDate`
@@ -168,18 +162,18 @@
 - **Use input query text:** ON
 - Dynamic value
 - Connected to **PnP - Search Box**.
-- **Use as default value** ON
-- **Default value** Blank ` `
+- **Use as default value** OFF
 - **Configure Query Modifiers:**
   - Enable **Advanced Search**.
-- **Connect to Filters Web Part:** Target the **PnP - Search Filters** web part.
 
 #### Advanced Search Settings (page 3 cont.)
 
 - **JobOpportunity List Path:** `https://{tenant}.sharepoint.com/sites/{SiteName}/Lists/{JobOpportunityListName}/`
-- **PnP Search Box Selector:** `[data-sp-feature-tag="pnpSearchBoxWebPart"] input`
+- **PnP Search Box Selector:** `[data-sp-feature-tag="pnpSearchBoxWebPart"] input` **confirm by inspecting your page**
 - **Advanced Search - Search Button ID:** `advancedSearch-Search`
 - **Advanced Search - Clear Button ID:** `advancedSearch-Clear`
+- **Filter - Apply Button ID:** `gcx-cm-filter-apply`
+- **Filter - Clear Button ID:** `gcx-cm-filter-clear`
 - **English JobTitle Managed Property:** `CM-JobTitleEn`
 - **French JobTitle Managed Property:** `CM-JobTitleFr`
 - **Department Managed Property:** `CM-DepartmentId`
@@ -190,6 +184,8 @@
 - **Duration Managed Property:** `CM-DurationId`
 - **Duartion Quantity Managed Property:** The `RefineableInt{num}` you setup earlier.
 - **ApplicationDeadline Filter Managed Property:** The `RefinableDateFirst{num}` you setup earlier.
+- **JobType Managed Property:** `CM-JobType`
+- **ProgramArea Managed Property:** `CM-ProgramArea`
 
 ### Final Steps
 
