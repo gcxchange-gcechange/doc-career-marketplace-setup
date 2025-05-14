@@ -186,6 +186,9 @@
 - **ApplicationDeadline Filter Managed Property:** The `RefinableDateFirst{num}` you setup earlier.
 - **JobType Managed Property:** `CM-JobType`
 - **ProgramArea Managed Property:** `CM-ProgramArea`
+- **Duration Years ID:** The ID of the `year(s)` item in the `Duration` list.
+- **Duration Months ID:** The ID of the `months(s)` item in the `Duration` list.
+- **Duration Weeks ID:** The ID of the `week(s)` item in the `Duration` list.
 
 ### Final Steps
 
