@@ -63,7 +63,7 @@
    - **Searchable:** True
    - **Queryable:** True
    - **Retrievable:** True
-   - **Multiple Values:** False (True for `JobType` and `Skills`)
+   - **Multiple Values:** False (True for `JobType`, `ProgramArea`, and `Skills`)
 
 3. **Create managed properties for PnP Search Filters:**
    - For **date filters:** Use `RefinableDateFirst{num}`.
@@ -96,8 +96,8 @@
 
 1. Add the web part to the page.
 2. Set the language to `en` or `fr`
-3. Enter the JobType term GUID
-4. Enter the ProgramArea term GUID 
+3. Enter the JobType term set GUID
+4. Enter the ProgramArea term set GUID 
 
 ### PnP - Search Results
 
@@ -126,7 +126,7 @@
   - CM-JobTitleFr
   - CM-JobType
   - Path
-- **Language of search request:** English (1033)
+- **Language of search request:** English (1033) **this is very important**
 - **Enable localization:** ON
 - **Show paging:** ON
 - **Items per page:** 9
@@ -169,7 +169,7 @@
 #### Advanced Search Settings (page 3 cont.)
 
 - **JobOpportunity List Path:** `https://{tenant}.sharepoint.com/sites/{SiteName}/Lists/{JobOpportunityListName}/`
-- **PnP Search Box Selector:** `[data-sp-feature-tag="pnpSearchBoxWebPart"] input` **confirm by inspecting your page**
+- **PnP Search Box Selector:** `[data-sp-feature-tag="pnpSearchBoxWebPart"] input` **confirm by inspecting your page, french version can have a different selector**
 - **Advanced Search - Search Button ID:** `advancedSearch-Search`
 - **Advanced Search - Clear Button ID:** `advancedSearch-Clear`
 - **Filter - Apply Button ID:** `gcx-cm-filter-apply`
@@ -207,4 +207,4 @@
 3. Add the hidden column names to the **app settings** in the format: `{columnName}HiddenColName` (first character lowercase).
 4. Complete the Function App setup as per the project documentation.
 
-For more details, refer to the `README.md` of the function app.
+For more details, refer to the [README.md](https://github.com/gcxchange-gcechange/appsvc-function-dev-cm-listmgmt-dotnet001/blob/master/README.md) of the function app.
