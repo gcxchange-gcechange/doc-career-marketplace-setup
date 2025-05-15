@@ -25,7 +25,7 @@
 | **JobTitleEn**          | Single line of text    |                     |                   |                            |                               |
 | **JobTitleFr**          | Single line of text    |                     |                   |                            |                               |
 | **JobType**             | Managed Metadata       | Job Type            |                   |                            | Allow multiple selections     |
-| **ProgramArea**         | Managed Metadata       | Program Area        |                   |                            |                               |
+| **ProgramArea**         | Managed Metadata       | Program Area        |                   |                            | Allow multiple selections     |
 | **ClassificationCode**  | Lookup List Column     | ClassificationCode  | NameEn            | NameFr, ID                 |                               |
 | **ClassificationLevel** | Lookup List Column     | ClassificationLevel | NameEn            | NameFr, ID                 |                               |
 | **NumberOfOpportunities** | Number               |                     |                   |                            |                               |
