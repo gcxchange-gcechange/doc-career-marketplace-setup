@@ -56,7 +56,7 @@
    - For **DurationInDays** map to one of the  existing `RefinableInt{num}` managed properties.
    - **Crawled Property Formats:**
      - Managed metadata: `OWS_TAXID_{ColumnName}`
-     - Other fields: `OWS_{ColumnName}`
+     - Other fields: `OWS_{ColumnName}`, or `OWS_{ColumnName}:{Id, NameEn, NameFr etc.}`, or `OWS_{ColumnName}:_x0020_{Id, NameEn, NameFr etc.}` 
 
 2. **Managed Property Settings:**
    - **Type:** Text (Yes/No for `ApprovedStaffing`)
