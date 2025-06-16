@@ -197,6 +197,8 @@
 
 ## Function App Setup
 
+1. Add a queue named `delete` to the storage account in the `drg_gcx_ENV_appservice_careermarketplace` resource group.
+
 ### `appsvc-function-dev-cm-listmgmt-dotnet001`
 
 1. **List hidden columns** in the `JobOpportunity` list:
