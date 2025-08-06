@@ -85,7 +85,8 @@
 
 ### PnP - Search Box
 
-- Add the web part to the page. No configuration needed.
+1. Add the web part to the page.
+2. Enable `Reset query on clear` option.
 
 ### Advanced Search Web Part
 
