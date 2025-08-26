@@ -165,7 +165,8 @@
 - Connected to **PnP - Search Box**.
 - **Use as default value** OFF
 - **Configure Query Modifiers:**
-  - Enable **Advanced Search**.
+  - Enable **Advanced Search** if you want to enable the Advanced Search webpart.
+  - Enable **Owner Opportunities** if you want to only get results for job opportunities that you've authored.
 
 #### Advanced Search Settings (page 3 cont.)
 
@@ -190,6 +191,11 @@
 - **Duration Years ID:** The ID of the `year(s)` item in the `Duration` list.
 - **Duration Months ID:** The ID of the `months(s)` item in the `Duration` list.
 - **Duration Weeks ID:** The ID of the `week(s)` item in the `Duration` list.
+
+#### Owner Opportunities Settings (page 3 cont.)
+
+- **JobOpportunity List Path:** `https://{tenant}.sharepoint.com/sites/{SiteName}/Lists/{JobOpportunityListName}/`
+- **ContactObjectId Managed Property Name:** `CM-ContactObjectId`
 
 ### Final Steps
 
