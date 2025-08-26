@@ -166,7 +166,7 @@
 - **Use as default value** OFF
 - **Configure Query Modifiers:**
   - Enable **Advanced Search** if you want to enable the Advanced Search webpart.
-  - Enable **Owner Opportunities** if you want to only get results for job opportunities that you've authored.
+  - Enable **Owner Opportunities** to limit search results to job opportunities that they've created.
 
 #### Advanced Search Settings (page 3 cont.)
 
