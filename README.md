@@ -22,6 +22,7 @@
 | **ContactName**         | Single line of text    |                     |                   |                            |                               |
 | **Department**          | Lookup List Column     | Department          | NameEn            | NameFr, ID                 |                               |
 | **ContactEmail**        | Single line of text    |                     |                   |                            |                               |
+| **ApplyEmail**          | Single line of text    |                     |                   |                            |                               |
 | **JobTitleEn**          | Single line of text    |                     |                   |                            |                               |
 | **JobTitleFr**          | Single line of text    |                     |                   |                            |                               |
 | **JobType**             | Managed Metadata       | Job Type            |                   |                            | Allow multiple selections     |
@@ -116,6 +117,7 @@
   - CM-ClassificationCode
   - CM-ClassificationCodeFr
   - CM-ContactEmail
+  - CM-ApplyEmail
   - CM-ContactName
   - CM-ContactObjectId
   - CM-Duration
@@ -146,6 +148,7 @@
 - **ClassificationCodeEn Managed Property:** `CM-ClassificationCode`
 - **ClassificationCodeFr Managed Property:** `CM-ClassificationCodeFr`
 - **ContactEmail Managed Property:** `CM-ContactEmail`
+- **ApplyEmail Managed Property:** `CM-ApplyEmail`
 - **ContactName Managed Property:** `CM-ContactName`
 - **ContactObjectId Managed Property:** `CM-ContactObjectId`
 - **DurationEn Managed Property:** `CM-Duration`
